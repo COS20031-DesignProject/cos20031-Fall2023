@@ -3,6 +3,7 @@
 -- as of 2019-04-17 bw
 
 CREATE DATABASE IF NOT EXISTS scratch DEFAULT CHARSET = utf8;
+
 USE scratch;
 
 DROP TABLE IF EXISTS customer;
