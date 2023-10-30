@@ -57,6 +57,9 @@ SELECT DISTINCT table_name, index_name
 -- 04 Dropping indexes
 
 USE scratch;
+
+DROP INDEX str1 ON test;
+
 DESCRIBE customer;
 SHOW INDEX FROM customer;
 CREATE INDEX custzip ON customer(zip);
@@ -104,9 +107,12 @@ INSERT INTO test (string1, string2)
   ('foo', 'bar'), ('this', 'that'), ('another', 'row'), ('foo', 'alpha'),
   ('foo', 'bar'), ('this', 'that'), ('another', 'row'), ('foo', 'alpha'),
   ('foo', 'bar'), ('this', 'that'), ('another', 'row'), ('foo', 'alpha')
+  ('foo', 'bar'), ('this', 'that'), ('another', 'row'), ('foo', 'alpha')
   ;
 -- Using INDEX: record the query time  (0.0008 seconds)
-SELECT string1, string2 FROM test ORDER BY string1, string2;
+SELECT string1, string2 
+FROM test 
+ORDER BY string1, string2;
 
 -- NOT Using INDEX: record the query time (0.0018 seconds)
 DROP INDEX twostrs ON test;
