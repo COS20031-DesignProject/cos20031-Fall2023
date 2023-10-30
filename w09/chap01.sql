@@ -14,6 +14,7 @@ CREATE TABLE test (
     string1 VARCHAR(128),
     string2 VARCHAR(128)
 );
+
 SHOW INDEX FROM test;
 
 -- version 2.0: index on non-key column
@@ -26,10 +27,23 @@ CREATE TABLE test (
 );
 SHOW INDEX FROM test;
 
-CREATE INDEX i_str2 ON test(string2);
+CREATE INDEX str2 ON test(string2);
 SHOW INDEX FROM test;
 
 DROP TABLE IF EXISTS test;
+
+-- 02(b): unique indexes
+DROP TABLE IF EXISTS test;
+CREATE TABLE test (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    string1 VARCHAR(128),
+    string2 VARCHAR(128),
+    UNIQUE INDEX str1(string1)
+);
+
+CREATE UNIQUE INDEX str2 ON test(string2);
+
+SHOW INDEX FROM test;
 
 -- 03 Showing indexes
 
