@@ -106,7 +106,7 @@ INSERT INTO test (string1, string2)
   ('foo', 'bar'), ('this', 'that'), ('another', 'row'), ('foo', 'alpha'),
   ('foo', 'bar'), ('this', 'that'), ('another', 'row'), ('foo', 'alpha'),
   ('foo', 'bar'), ('this', 'that'), ('another', 'row'), ('foo', 'alpha'),
-  ('foo', 'bar'), ('this', 'that'), ('another', 'row'), ('foo', 'alpha')
+  ('foo', 'bar'), ('this', 'that'), ('another', 'row'), ('foo', 'alpha'),
   ('foo', 'bar'), ('this', 'that'), ('another', 'row'), ('foo', 'alpha')
   ;
 -- Using INDEX: record the query time  (0.0008 seconds)
