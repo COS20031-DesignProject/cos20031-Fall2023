@@ -34,7 +34,7 @@ define("VERSION", "3.6.8");
 
 // ***** uncomment for SQLite 3
 define("DBENGINE", "sqlite3");
-define("DBFILE", "../db/album.db");
+define("DBFILE", "./db/album.db");
 // *********************************
 
 // ***** uncomment for MySQL
