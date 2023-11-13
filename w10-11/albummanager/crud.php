@@ -38,10 +38,10 @@ define("DBFILE", "./db/album.db");
 // *********************************
 
 // ***** uncomment for MySQL
-// define("DBENGINE", "mysql");
-// define("MYSQLUSER", "web");
-// define("MYSQLPASS", "");
-// define("MYSQLDB", "album");
+define("DBENGINE", "mysql");
+define("MYSQLUSER", "web");
+define("MYSQLPASS", "");
+define("MYSQLDB", "album");
 // *********************************
 
 $album_fields = array (
