@@ -30,7 +30,8 @@ insert into gold(value) values('100'),('200');
 insert into gold(value) values('dummy');drop table gold;
 
 -- sanitized INSERT: 
-insert into gold(value) values('dummy\');drop table gold;
+--  \')\;drop table gold\;
+insert into gold(value) values('dummy\')\;drop table gold\;
 
 -- normal SELECT
 select * from user where name='John';
@@ -41,6 +42,9 @@ select * from user where name='John';
 select * from user where name='';insert into user(name, password) values('hacker', '123456');
 
 select * from user where name='dummy';insert into user(name, password) values('hacker', '123456');
+
+-- sanitised data
+select * from user where name='dummy\'\;insert into user(name, password) values(\'hacker\', \'123456\')\;
 
 -- for numeric columns: 1 = 1 always returns true (1)
 select 1=1;
